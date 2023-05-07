@@ -90,6 +90,7 @@ salesorderhead.csv |
 * Verificar o nome do seu 'namenode', pois pode estar diferente do desse tutorial;
 * Da pasta na qual você irá disponibilizar os arquivos '.CSV' para mover ao docker;
 * Acessar corretamente a pasta que possui os arquivos .CSV com o WSL no seu computador, para então executar os comandos abaixo: 
+> DESCRIÇÃO DO COMANDO:  docker cp [arquivo_csv].csv [nome_do_seu_name_node]:/
 
 ```ssh
 docker cp product.csv 9ac9bc4900cf_namenode:/
