@@ -524,7 +524,21 @@ Acesse a aba files, em seguida a nossa estrutura no qual adicionamos ao criar ca
 
 > Consultar dados sobre Pessoas e “serviços” consumidos
 
+No HUE, vamos realizar uma consulta sobre a média de status da ordem de vendas por cliente, com isso execute o comando abaixo:
 
+```sql
+use adventureWorks;
+SELECT 
+    CustomerID,
+    avg(status)
+FROM salesorderhead
+GROUP BY 
+    customerid;
+```
+
+
+
+![image](https://user-images.githubusercontent.com/42544892/236703729-bdccfaad-db4e-4103-9af5-b3d1510668af.png)
 
 
 > Criar uma tabela com a visão dos tipos de serviço/Aventura contratados agregados;
