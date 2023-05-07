@@ -439,6 +439,19 @@ stored as textfile location '/app/AdventureWorks/tables/salesorderhead';
 
 
 <hr>
+<br>
+
+### Verificando as tabelas criadas ...
+
+Vamos acessar o [HUE](https://gethue.com/) novamente, caso esteja aberto atualize a página. Após isso verifique abaixo do banco de dados todas as tabelas que criamos.
+
+![image](https://user-images.githubusercontent.com/42544892/236665728-902a279e-6d8b-499c-9d77-c5b0bf88f0bb.png)
+
+
+
+
+<hr>
+<br>
 
 
 > Consultar dados sobre Pessoas e “serviços” consumidos
