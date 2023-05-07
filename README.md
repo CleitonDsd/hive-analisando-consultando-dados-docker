@@ -45,6 +45,20 @@ create database AdventureWorks;
 
 ![image](https://user-images.githubusercontent.com/42544892/236659345-96f93300-27da-4f7e-a642-bb2bd628a5a9.png)
 
+<br/>
+
+Agora podemos utilizar o [HUE](https://gethue.com/), para verificarmos o banco de dados que criamos.
+
+Porta | URL 
+----- | --------------
+8888  | http://localhost:8888/  
+
+
+Podemos verificar o nosso banco de dados destacado abaixo 
+
+![image](https://user-images.githubusercontent.com/42544892/236659654-1cfb69b6-4abd-4132-af03-a91ec9f8a385.png)
+
+
 
 
 > Carregar no HDFS os arquivos do diretório 
