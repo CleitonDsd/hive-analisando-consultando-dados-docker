@@ -159,7 +159,7 @@ stored as textfile location '/app/AdventureWorks/tables/customer';
 
 <b>Diagrama </b>
 
-Coluna | TipoURL 
+Coluna | Tipo
 ----- | --------------
 CustomerID | Int
 AddressID | Int
@@ -330,7 +330,7 @@ stored as textfile location '/app/AdventureWorks/tables/productmodel';
 <b>Diagrama </b>
 
 
-Coluna | TipoURL 
+Coluna | Tipo
 ----- | --------------
 ProductModelID | Int
 ProductDescriptionID | Int
@@ -354,13 +354,92 @@ stored as textfile location '/app/AdventureWorks/tables/productmodeldescription'
 <b> Resultado no Hive: </b>
 
 
-![image](https://user-images.githubusercontent.com/42544892/236665066-55d53675-9006-449d-b72a-123bfed6262f.png)
+![image](https://user-images.githubusercontent.com/42544892/236665358-858a3161-f14b-4d5d-bb66-5d80f8527cc4.png)
 
 
 
 
 
 <hr>
+<br>
+
+>> 9. SalesOrderDetail
+
+<b>Diagrama </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236665493-a919aaf5-a542-4520-bb37-fad0c33f9998.png)
+
+
+
+<b>DDL </b>
+
+
+```sql
+create external table salesorderdetail (SalesOrderID int, SalesOrderDetailID int,OrderQty int,ProductID int,UnitPrice float,UnitPriceDiscount float,LineTotal float,rowguid string,ModifiedDate string) 
+row format delimited fields terminated by ';'
+stored as textfile location '/app/AdventureWorks/tables/salesorderdetail';
+```
+
+
+<b> Resultado no Hive: </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236665533-215c4246-5b57-4722-bc8b-52129d944b6f.png)
+
+
+
+
+<hr>
+<br>
+
+>> 9. SalesOrderHeader
+<b>Diagrama </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236665551-e0da0072-f585-4100-85d3-1c2e07b4c13e.png)
+
+
+
+<b>DDL </b>
+
+
+```sql
+create external table salesorderhead (
+   SalesOrderID int,
+   RevisionNumber int,
+   OrderDate string,
+   DueDate string,
+   ShipDate string,
+   Status int,
+   SalesOrderNumber string,
+   CustomerID int,
+   ShipToAddressID int,
+   BillToAddressID int,
+   ShipMethod string,
+   CreditCardApprovalCode string,
+   SubTotal float,
+   TaxAmt float,
+   Freight float,
+   TotalDue float,
+   Comment string,
+   rowguid string,
+   ModifiedDate string
+) 
+row format delimited fields terminated by ';'
+stored as textfile location '/app/AdventureWorks/tables/salesorderhead';
+```
+
+
+<b> Resultado no Hive: </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236665622-4ea19299-b905-4512-8fb8-a362ed9b4d3e.png)
+
+
+
+<hr>
+
 
 > Consultar dados sobre Pessoas e “serviços” consumidos
 
