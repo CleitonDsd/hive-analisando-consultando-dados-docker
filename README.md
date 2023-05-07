@@ -127,7 +127,9 @@ location '/app/AdventureWorks/tables/address';
 
 
 ```sql
-create external table customer (CustomerID int,Title string,Suffix string,CompanyName string,SalesPerson string, EmailAddress string,PasswordHash string,PasswordSalt string,rowguid string,ModifiedDate string) row format delimited fields terminated by ';' stored as textfile location '/app/AdventureWorks/tables/customer';
+create external table customer (CustomerID int,Title string,Suffix string,CompanyName string,SalesPerson string, EmailAddress string,PasswordHash string,PasswordSalt string,rowguid string,ModifiedDate string) 
+row format delimited fields terminated by ';' 
+stored as textfile location '/app/AdventureWorks/tables/customer';
 ```
 
 
