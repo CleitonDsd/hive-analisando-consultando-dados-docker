@@ -1,4 +1,4 @@
-# Hive - Consultando e analisando dados 
+# Hive - Criando tabelas, Consultando e analisando dados 
 <hr/>
 
 > Inicializando o Hive 
