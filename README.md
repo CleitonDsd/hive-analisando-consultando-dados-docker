@@ -74,6 +74,7 @@ Arquivo/Tabela |
 address | 
 customer | 
 customeraddress | 
+product |
 productcategory | 
 productdescription | 
 productmodel | 
