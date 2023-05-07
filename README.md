@@ -71,18 +71,20 @@ A seguir, vamos carregar os arquivos abaixo que foram disponibilizados [aqui](ht
 
 Arquivo/Tabela | 
 -----   | 
-address | 
-customer | 
-customeraddress | 
-product |
-productcategory | 
-productdescription | 
-productmodel | 
-productmodeldescription | 
-salesorderdetail | 
-salesorderhead | 
+address.csv | 
+customer.csv | 
+customeraddress.csv | 
+product.csv |
+productcategory.csv | 
+productdescription.csv | 
+productmodel.csv | 
+productmodeldescription.csv | 
+salesorderdetail.csv | 
+salesorderhead.csv | 
 
 <br/>
+<hr>
+<br>
 
 > Criar tabelas externas com os dados no Hive
 
@@ -114,7 +116,7 @@ ModifiedDate | Date
 create external table address (AddressID int, AddressLine1 string, AddressLine2 string,City string,PostalCode string,rowguid string,ModifiedDate string) 
 row format delimited fields terminated by ';' 
 stored as textfile 
-location '/app/AdventureWorks/address';
+location '/app/AdventureWorks/tables/address';
 ```
 
 <hr>
