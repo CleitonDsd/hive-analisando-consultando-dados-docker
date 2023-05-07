@@ -59,13 +59,29 @@ Podemos verificar o nosso banco de dados destacado abaixo
 ![image](https://user-images.githubusercontent.com/42544892/236659654-1cfb69b6-4abd-4132-af03-a91ec9f8a385.png)
 
 
+<br>
+<hr>
+
 
 
 > Carregar no HDFS os arquivos do diretório 
 
+A seguir, vamos listar e criar as tabelas com o mesmo nome dos arquivos disponibilizados, as tabelas armazenarão os dados desses arquivos (.csv).
 
 
+Arquivo/Tabela | 
+-----   | 
+address | 
+customer | 
+customeraddress | 
+productcategory | 
+productdescription | 
+productmodel | 
+productmodeldescription | 
+salesorderdetail | 
+salesorderhead | 
 
+<br/>
 
 > Criar tabelas externas com os dados no Hive
 
