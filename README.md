@@ -183,7 +183,8 @@ location '/app/AdventureWorks/address';
 ```
 
 
-<b> Após executar o DDL, tevemos ter o seguinte resultado no Hive: </b>
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236662577-c69e13be-de5c-480c-8216-55e847504e0b.png)
 
@@ -208,8 +209,8 @@ stored as textfile location '/app/AdventureWorks/customer';
 ```
 
 
-<b> Resultado no Hive: </b>
-
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236663038-0ac4e90f-fdba-4182-b72c-08ddadc1d4ac.png)
 
@@ -241,8 +242,8 @@ stored as textfile location '/app/AdventureWorks/customeraddress';
 ```
 
 
-<b> Resultado no Hive: </b>
-
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236664408-cf7dc6b6-afa6-4a4b-b991-93388b7679ef.png)
 
@@ -286,8 +287,8 @@ create external table product (
 ```
 
 
-<b> Resultado no Hive: </b>
-
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236664576-a4c9a216-0f0e-4d27-9826-509d42e2c85f.png)
 
@@ -315,8 +316,8 @@ stored as textfile location '/app/AdventureWorks/productcategory';
 ```
 
 
-<b> Resultado no Hive: </b>
-
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236664732-b085bc5a-dc27-464a-8c8c-9d233d30917c.png)
 
@@ -346,8 +347,8 @@ stored as textfile location '/app/AdventureWorks/productdescription';
 ```
 
 
-<b> Resultado no Hive: </b>
-
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236664952-1da3efb8-0001-4d4e-984c-42403a6eb36f.png)
 
@@ -376,8 +377,8 @@ stored as textfile location '/app/AdventureWorks/productmodel';
 ```
 
 
-<b> Resultado no Hive: </b>
-
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236665066-55d53675-9006-449d-b72a-123bfed6262f.png)
 
@@ -414,8 +415,8 @@ stored as textfile location '/app/AdventureWorks/productmodeldescription';
 ```
 
 
-<b> Resultado no Hive: </b>
-
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236665358-858a3161-f14b-4d5d-bb66-5d80f8527cc4.png)
 
@@ -445,8 +446,8 @@ stored as textfile location '/app/AdventureWorks/salesorderdetail';
 ```
 
 
-<b> Resultado no Hive: </b>
-
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236665533-215c4246-5b57-4722-bc8b-52129d944b6f.png)
 
@@ -494,8 +495,8 @@ stored as textfile location '/app/AdventureWorks/salesorderhead';
 ```
 
 
-<b> Resultado no Hive: </b>
-
+<b> Após executar o DDL, tevemos ter um resultado parecido com o da imagem abaixo no Hive: </b>
+<i>(imagem ilustrativa)</i>
 
 ![image](https://user-images.githubusercontent.com/42544892/236665622-4ea19299-b905-4512-8fb8-a362ed9b4d3e.png)
 
