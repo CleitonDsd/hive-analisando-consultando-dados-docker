@@ -186,6 +186,84 @@ stored as textfile location '/app/AdventureWorks/tables/customeraddress';
 
 
 <hr>
+<br>
+
+>> 4. Product
+
+<b>Diagrama </b>
+
+![image](https://user-images.githubusercontent.com/42544892/236664480-2308af49-6829-41f3-b2f4-f265f2cba8a8.png)
+
+
+
+<b>DDL </b>
+
+
+```sql
+create external table product (
+   ProductID int,
+   ProductNumber string,
+   Color string,
+   StandardCost float,
+   ListPrice float,
+   Size string,
+   Weight float,
+   ProductCategoryID int,
+   ProductModelID int,
+   SellStartDate string,
+   SellEndDate string,
+   DiscontinuedDate string,
+   ThumbNailPhoto string,
+   ThumbnailPhotoFileName string,
+   rowguid string,
+   ModifiedDate string
+)
+ row format delimited fields terminated by ';'
+ stored as textfile location '/app/AdventureWorks/tables/product';
+```
+
+
+<b> Resultado no Hive: </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236664576-a4c9a216-0f0e-4d27-9826-509d42e2c85f.png)
+
+
+
+
+<hr>
+<br>
+
+>> 5. ProductCategory
+
+<b>Diagrama </b>
+
+![image](https://user-images.githubusercontent.com/42544892/236664661-1d826508-f194-4fa3-b572-c8b7e7b708e7.png)
+
+
+
+<b>DDL </b>
+
+
+```sql
+create external table productcategory (ProductCategoryID int,ParentProductCategoryID int,rowguid string,ModifiedDate string)
+row format delimited fields terminated by ';' 
+stored as textfile location '/app/AdventureWorks/tables/productcategory';
+```
+
+
+<b> Resultado no Hive: </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236664732-b085bc5a-dc27-464a-8c8c-9d233d30917c.png)
+
+
+
+
+
+<hr>
+
+
 
 
 > Consultar dados sobre Pessoas e “serviços” consumidos
