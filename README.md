@@ -567,3 +567,17 @@ stored as textfile;
 
 > Criar uma tabela com dados para seguimentação e analíse dos clients;
 
+Vamos criar uma tabela para categoria do produto, vamos clusterizar ela a partir de 10 buckets, com isso poderemos obter as cores disponíveis por cada categoria de produto, serados com base em cada tamanho existente. 
+
+```sql
+create external table productcategorybucket 
+(color string, categoryproduct int) 
+
+partitioned by (size int)
+
+Clustered by (categoryproduct) into 10 buckets 
+
+row format delimited 
+fields terminated by ','
+stored as textfile;
+```
