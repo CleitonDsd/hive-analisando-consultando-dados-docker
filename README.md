@@ -119,6 +119,13 @@ stored as textfile
 location '/app/AdventureWorks/tables/address';
 ```
 
+
+Após executar o DDL, tevemos ter o seguinte resultado no Hive: 
+
+![image](https://user-images.githubusercontent.com/42544892/236662577-c69e13be-de5c-480c-8216-55e847504e0b.png)
+
+
+
 <hr>
 
 
