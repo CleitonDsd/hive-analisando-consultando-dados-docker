@@ -159,6 +159,12 @@ stored as textfile location '/app/AdventureWorks/tables/customer';
 
 <b>Diagrama </b>
 
+Coluna | TipoURL 
+----- | --------------
+CustomerID | Int
+AddressID | Int
+rowguid | String
+ModifiedDate | DATE
 
 
 
@@ -166,16 +172,16 @@ stored as textfile location '/app/AdventureWorks/tables/customer';
 
 
 ```sql
-create external table customer (CustomerID int,Title string,Suffix string,CompanyName string,SalesPerson string, EmailAddress string,PasswordHash string,PasswordSalt string,rowguid string,ModifiedDate string) 
+create external table customeraddress (CustomerID int,AddressID string,rowguid string,ModifiedDate string) 
 row format delimited fields terminated by ';' 
-stored as textfile location '/app/AdventureWorks/tables/customer';
+stored as textfile location '/app/AdventureWorks/tables/customeraddress';
 ```
 
 
 <b> Resultado no Hive: </b>
 
 
-![image](https://user-images.githubusercontent.com/42544892/236663038-0ac4e90f-fdba-4182-b72c-08ddadc1d4ac.png)
+![image](https://user-images.githubusercontent.com/42544892/236664408-cf7dc6b6-afa6-4a4b-b991-93388b7679ef.png)
 
 
 
