@@ -86,6 +86,18 @@ salesorderhead.csv |
 <hr>
 <br>
 
+### Antes de executar os DDLs para a criação das tablelas, certifique-se de que executou o comando abaixo, na dúvida execute novamente.
+
+![image](https://user-images.githubusercontent.com/42544892/236663207-f17e8351-4e8d-46e7-b204-dc9f56a2f7db.png)
+
+```sql
+use adventureworks;
+```
+
+<br/>
+<hr>
+<br>
+
 > Criar tabelas externas com os dados no Hive
 
 
@@ -135,12 +147,39 @@ stored as textfile location '/app/AdventureWorks/tables/customer';
 
 <b> Resultado no Hive: </b>
 
-![image](https://user-images.githubusercontent.com/42544892/236662577-c69e13be-de5c-480c-8216-55e847504e0b.png)
+
+![image](https://user-images.githubusercontent.com/42544892/236663038-0ac4e90f-fdba-4182-b72c-08ddadc1d4ac.png)
 
 
 
 <hr>
+<br>
 
+>> 3. CustomerAddress
+
+<b>Diagrama </b>
+
+
+
+
+<b>DDL </b>
+
+
+```sql
+create external table customer (CustomerID int,Title string,Suffix string,CompanyName string,SalesPerson string, EmailAddress string,PasswordHash string,PasswordSalt string,rowguid string,ModifiedDate string) 
+row format delimited fields terminated by ';' 
+stored as textfile location '/app/AdventureWorks/tables/customer';
+```
+
+
+<b> Resultado no Hive: </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236663038-0ac4e90f-fdba-4182-b72c-08ddadc1d4ac.png)
+
+
+
+<hr>
 
 
 > Consultar dados sobre Pessoas e “serviços” consumidos
