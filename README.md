@@ -447,7 +447,11 @@ Vamos acessar o [HUE](https://gethue.com/) novamente, caso esteja aberto atualiz
 
 ![image](https://user-images.githubusercontent.com/42544892/236665728-902a279e-6d8b-499c-9d77-c5b0bf88f0bb.png)
 
+<br/>
 
+Acesse a aba files, e acesse a nossa estrutura no qual adicionamos ao criar cada tabela (externa), com o parametro 'location'. 
+
+![image](https://user-images.githubusercontent.com/42544892/236665973-02a3288c-f12e-4c26-8c3b-6e05083fdbc9.png)
 
 
 <hr>
