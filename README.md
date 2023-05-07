@@ -260,11 +260,107 @@ stored as textfile location '/app/AdventureWorks/tables/productcategory';
 
 
 
+<hr>
+<br>
+
+>> 6. ProductDescription
+
+<b>Diagrama </b>
+
+![image](https://user-images.githubusercontent.com/42544892/236664928-41a52234-8260-4e9a-9050-7f50efb27a6d.png)
+
+
+
+
+<b>DDL </b>
+
+
+```sql
+
+create external table productdescription (ProductDescriptionID int,Description string,rowguid string, ModifiedDate string)
+row format delimited fields terminated by ';' 
+stored as textfile location '/app/AdventureWorks/tables/productdescription';
+```
+
+
+<b> Resultado no Hive: </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236664952-1da3efb8-0001-4d4e-984c-42403a6eb36f.png)
+
+
+
 
 <hr>
+<br>
+
+>> 7. ProductModel
+
+<b>Diagrama </b>
+
+![image](https://user-images.githubusercontent.com/42544892/236665010-c876bc0f-8b55-4243-9505-aa264c54915d.png)
 
 
 
+
+<b>DDL </b>
+
+
+```sql
+create external table productmodel (ProductModelID int,CatalogDescription string,rowguid string,ModifiedDate string)
+row format delimited fields terminated by ';'
+stored as textfile location '/app/AdventureWorks/tables/productmodel';
+```
+
+
+<b> Resultado no Hive: </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236665066-55d53675-9006-449d-b72a-123bfed6262f.png)
+
+
+
+
+
+<hr>
+<br>
+
+>> 8. ProductModelDescription
+
+<b>Diagrama </b>
+
+
+Coluna | TipoURL 
+----- | --------------
+ProductModelID | Int
+ProductDescriptionID | Int
+Culture | String
+rowguid | String
+ModifiedDate | DATE
+
+
+
+
+<b>DDL </b>
+
+
+```sql
+create external table productmodeldescription (ProductModelID int,ProductDescriptionID int,Culture string,rowguid string,ModifiedDate string)
+row format delimited fields terminated by ';'
+stored as textfile location '/app/AdventureWorks/tables/productmodeldescription';
+```
+
+
+<b> Resultado no Hive: </b>
+
+
+![image](https://user-images.githubusercontent.com/42544892/236665066-55d53675-9006-449d-b72a-123bfed6262f.png)
+
+
+
+
+
+<hr>
 
 > Consultar dados sobre Pessoas e “serviços” consumidos
 
