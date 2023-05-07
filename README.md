@@ -91,19 +91,6 @@ salesorderhead.csv |
 
 >> 1. address
 
-Atributos
-
-Nome | Tipo 
------ | --------------
-AddressID | Int
-AddressLine1 |  String
-AddressLine2 |  String
-City | String
-PostalCode | String
-rowguid | String 
-ModifiedDate | Date
-
-
 <b>Diagrama </b>
 
 ![image](https://user-images.githubusercontent.com/42544892/236662082-a54d0ecb-b2cc-439e-beda-cd7310b4f44c.png)
@@ -120,7 +107,31 @@ location '/app/AdventureWorks/tables/address';
 ```
 
 
-Após executar o DDL, tevemos ter o seguinte resultado no Hive: 
+<b> Após executar o DDL, tevemos ter o seguinte resultado no Hive: </b>
+
+![image](https://user-images.githubusercontent.com/42544892/236662577-c69e13be-de5c-480c-8216-55e847504e0b.png)
+
+
+
+<hr>
+<br>
+
+>> 2. Customer
+
+<b>Diagrama </b>
+
+![image](https://user-images.githubusercontent.com/42544892/236662941-045516f5-bac5-4690-ae76-6bc3447c33f4.png)
+
+
+<b>DDL </b>
+
+
+```sql
+create external table customer (CustomerID int,Title string,Suffix string,CompanyName string,SalesPerson string, EmailAddress string,PasswordHash string,PasswordSalt string,rowguid string,ModifiedDate string) row format delimited fields terminated by ';' stored as textfile location '/app/AdventureWorks/tables/customer';
+```
+
+
+<b> Resultado no Hive: </b>
 
 ![image](https://user-images.githubusercontent.com/42544892/236662577-c69e13be-de5c-480c-8216-55e847504e0b.png)
 
