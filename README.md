@@ -543,8 +543,27 @@ GROUP BY
 
 > Criar uma tabela com a visão dos tipos de serviço/Aventura contratados agregados;
 
+Para isso, vamos criar a tabela com as ordens particionadas por ano, para que possamos ter uma visão com base nas datas (ano).
 
-
+```sql
+create external table order_partitioned (
+   SalesOrderID int,
+   OrderDate string,
+   DueDate string,
+   ShipDate string,
+   Status int,
+   SalesOrderNumber string,
+   CustomerID int,
+   ShipToAddressID int,
+   BillToAddressID int,
+   ShipMethod string,
+   SubTotal float,
+   TotalDue float
+) 
+partitioned by (year int)
+row format delimited fields terminated by ','
+stored as textfile;
+```
 
 > Criar uma tabela com dados para seguimentação e analíse dos clients;
 
