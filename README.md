@@ -1,6 +1,7 @@
 # Hive - Criando tabelas, consultando e analisando dados 
 <hr/>
 
+
 > Inicializando o Hive 
 
 Para acessar o container execute o comando a seguir
@@ -163,7 +164,7 @@ use adventureworks;
 <br>
 
 > Criar tabelas externas com os dados no Hive
-
+>> <I>(SEGUIR FIELMENTE OS DDL'S, DIAGRAMAS DISPONIBILIZADOS NO DRIVE(MATERIAL) ESTÃO DIVERGENTES EM RELAÇÃO A OS DADOS DO CSV)</I>
 
 >> 1. address
 
