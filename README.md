@@ -179,7 +179,7 @@ use adventureworks;
 create external table address (AddressID int, AddressLine1 string, AddressLine2 string,City string,PostalCode string,rowguid string,ModifiedDate string) 
 row format delimited fields terminated by ';' 
 stored as textfile 
-location '/app/AdventureWorks/tables/address';
+location '/app/AdventureWorks/address';
 ```
 
 
@@ -200,7 +200,6 @@ location '/app/AdventureWorks/tables/address';
 
 
 <b>DDL </b>
-
 
 ```sql
 create external table customer (CustomerID int,Title string,Suffix string,CompanyName string,SalesPerson string, EmailAddress string,PasswordHash string,PasswordSalt string,rowguid string,ModifiedDate string) 
