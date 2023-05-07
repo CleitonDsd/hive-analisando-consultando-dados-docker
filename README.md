@@ -89,7 +89,7 @@ salesorderhead.csv |
 
 * Verificar o nome do seu 'namenode', pois pode estar diferente do desse tutorial;
 * Da pasta na qual você irá disponibilizar os arquivos '.CSV' para mover ao docker;
-* Acessar corretamente a pasta que possui os arquivos .CSV com o WSL no seu computador, para então executar os comandos abaixo: 
+* Acessar corretamente a pasta que possui os arquivos .CSV ([disponibilizados aqui](https://drive.google.com/drive/folders/1OfZTSYcgcun-S7UFNVAzbcr0-PzlEc08)) com o WSL no seu computador, para então executar os comandos abaixo: 
 > DESCRIÇÃO DO COMANDO:  docker cp [arquivo_csv].csv [nome_do_seu_name_node]:/
 
 ```ssh
@@ -112,11 +112,43 @@ docker cp salesorderhead.csv 9ac9bc4900cf_namenode:/```
 
 Veja como enviar arquivos para o docker utilizando o WSL [clicando aqui.](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba)
 
+<br>
+
+Agora vamos pegar o script <i>files-from-docker-to-hdfs.SH</i> que irá enviar os arquivos do nosso container para o HDFS, o script está [disponiblizado aqui.]()
+
+Após realizar o download do script, vamos acessar a pasta onde ele está armazenado no seu computador com o WSL e vamos executar o comando abaixo, (SE ATENTE A OS AVISOS DO TÓPICO ANTERIOR). 
+
+```ssh
+docker cp hdfs.sh 9ac9bc4900cf_namenode:/
+```
+
+![image](https://user-images.githubusercontent.com/42544892/236700451-ff9facd1-f617-4447-aa79-58f58ce53e28.png)
+
+<br>
+
+Após executar ese comando, vamos acessar o nosso name node e executar o comando abaixo para listar nossos arquivos e pastas.
+
+```ssh
+ls 
+```
+![image](https://user-images.githubusercontent.com/42544892/236700562-b4f7bba5-be71-42af-9d6c-227d06eb06a8.png)
 
 
+Após verificar que os arquivos estão no diretório, vamos acessar um por um remover o cabeçalho via VI. 
+
+![image](https://user-images.githubusercontent.com/42544892/236701418-015e1b15-d5a0-4895-a776-07c3ddb177b8.png)
+
+
+
+Em seguida, vamos executar o script <i>files-from-docker-to-hdfs.sh</i>, para isso execute o comando abaixo: 
+```ssh
+bash ./files-from-docker-to-hdfs.sh
+```
 <br>
 <hr>
 <br>
+
+Em seguida, acesse o Hive. Após acessar o Hive execute as instruções a abaixo.
 
 ### Antes de executar os DDLs para a criação das tablelas, certifique-se de que executou o comando abaixo, na dúvida execute novamente.
 
@@ -173,7 +205,7 @@ location '/app/AdventureWorks/tables/address';
 ```sql
 create external table customer (CustomerID int,Title string,Suffix string,CompanyName string,SalesPerson string, EmailAddress string,PasswordHash string,PasswordSalt string,rowguid string,ModifiedDate string) 
 row format delimited fields terminated by ';' 
-stored as textfile location '/app/AdventureWorks/tables/customer';
+stored as textfile location '/app/AdventureWorks/customer';
 ```
 
 
@@ -206,7 +238,7 @@ ModifiedDate | DATE
 ```sql
 create external table customeraddress (CustomerID int,AddressID string,rowguid string,ModifiedDate string) 
 row format delimited fields terminated by ';' 
-stored as textfile location '/app/AdventureWorks/tables/customeraddress';
+stored as textfile location '/app/AdventureWorks/customeraddress';
 ```
 
 
@@ -251,7 +283,7 @@ create external table product (
    ModifiedDate string
 )
  row format delimited fields terminated by ';'
- stored as textfile location '/app/AdventureWorks/tables/product';
+ stored as textfile location '/app/AdventureWorks/product';
 ```
 
 
@@ -280,7 +312,7 @@ create external table product (
 ```sql
 create external table productcategory (ProductCategoryID int,ParentProductCategoryID int,rowguid string,ModifiedDate string)
 row format delimited fields terminated by ';' 
-stored as textfile location '/app/AdventureWorks/tables/productcategory';
+stored as textfile location '/app/AdventureWorks/productcategory';
 ```
 
 
@@ -311,7 +343,7 @@ stored as textfile location '/app/AdventureWorks/tables/productcategory';
 
 create external table productdescription (ProductDescriptionID int,Description string,rowguid string, ModifiedDate string)
 row format delimited fields terminated by ';' 
-stored as textfile location '/app/AdventureWorks/tables/productdescription';
+stored as textfile location '/app/AdventureWorks/productdescription';
 ```
 
 
@@ -341,7 +373,7 @@ stored as textfile location '/app/AdventureWorks/tables/productdescription';
 ```sql
 create external table productmodel (ProductModelID int,CatalogDescription string,rowguid string,ModifiedDate string)
 row format delimited fields terminated by ';'
-stored as textfile location '/app/AdventureWorks/tables/productmodel';
+stored as textfile location '/app/AdventureWorks/productmodel';
 ```
 
 
@@ -379,7 +411,7 @@ ModifiedDate | DATE
 ```sql
 create external table productmodeldescription (ProductModelID int,ProductDescriptionID int,Culture string,rowguid string,ModifiedDate string)
 row format delimited fields terminated by ';'
-stored as textfile location '/app/AdventureWorks/tables/productmodeldescription';
+stored as textfile location '/app/AdventureWorks/productmodeldescription';
 ```
 
 
@@ -410,7 +442,7 @@ stored as textfile location '/app/AdventureWorks/tables/productmodeldescription'
 ```sql
 create external table salesorderdetail (SalesOrderID int, SalesOrderDetailID int,OrderQty int,ProductID int,UnitPrice float,UnitPriceDiscount float,LineTotal float,rowguid string,ModifiedDate string) 
 row format delimited fields terminated by ';'
-stored as textfile location '/app/AdventureWorks/tables/salesorderdetail';
+stored as textfile location '/app/AdventureWorks/salesorderdetail';
 ```
 
 
@@ -459,7 +491,7 @@ create external table salesorderhead (
    ModifiedDate string
 ) 
 row format delimited fields terminated by ';'
-stored as textfile location '/app/AdventureWorks/tables/salesorderhead';
+stored as textfile location '/app/AdventureWorks/salesorderhead';
 ```
 
 
