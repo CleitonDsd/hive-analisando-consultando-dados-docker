@@ -83,6 +83,37 @@ salesorderdetail.csv |
 salesorderhead.csv | 
 
 <br/>
+
+
+<b>CERTIFIQUE-SE:</b>
+
+* Verificar o nome do seu 'namenode', pois pode estar diferente do desse tutorial;
+* Da pasta na qual você irá disponibilizar os arquivos '.CSV' para mover ao docker;
+* Acessar corretamente a pasta que possui os arquivos .CSV com o WSL no seu computador, para então executar os comandos abaixo: 
+
+```ssh
+docker cp product.csv 9ac9bc4900cf_namenode:/
+docker cp customer.csv 9ac9bc4900cf_namenode:/
+docker cp customeraddress.csv 9ac9bc4900cf_namenode:/
+docker cp product.csv 9ac9bc4900cf_namenode:/
+docker cp productcategory.csv 9ac9bc4900cf_namenode:/
+docker cp productdescription.csv 9ac9bc4900cf_namenode:/
+docker cp productmodel.csv 9ac9bc4900cf_namenode:/
+docker cp productmodeldescription.csv 9ac9bc4900cf_namenode:/
+docker cp salesorderdetail.csv 9ac9bc4900cf_namenode:/
+docker cp salesorderhead.csv 9ac9bc4900cf_namenode:/```
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/42544892/236699829-d34653b8-e5a1-46af-877a-6a689e81fc88.png)
+
+<hr/>
+
+Veja como enviar arquivos para o docker utilizando o WSL [clicando aqui.](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba)
+
+
+
+<br>
 <hr>
 <br>
 
