@@ -581,3 +581,33 @@ row format delimited
 fields terminated by ','
 stored as textfile;
 ```
+
+<br>
+<hr>
+<br>
+
+> Modelar uma flattened table com os KPIS que vocês interpretam como essênciais para 
+monitoramento do negócio, do ponto de vista de uma fato de venda/contratação.
+
+A seguir, temos o DDL de criação da nossa flattened table, nessa tabela concentramos as principais 'dimensões' utilizados no dia a dia de vendas, nela temos regras que nos permitem analisar os dados e obter um direcionamento sobre quais produtos em suas respectivas categorias são mais vendidos para determinados clientes, atrelados por região, quantidade e até a média de venda de cada produto por categoria por ano (partição). 
+
+
+```sql
+CREATE EXTERNAL TABLE customer_order_fato (
+
+    CustomerID int,
+    ProductID int,
+    ProductModelID int, 
+    ProductCategoryID int,
+    SalesOrderID int, 
+    SalesOrderDetailID int,
+    UnitPrice int,
+    OrderQty int    
+)
+partitioned by (year int)
+row format delimited fields terminated by ','
+stored as parquet
+LOCATION '/app/AdventureWorks/';
+
+```
+
