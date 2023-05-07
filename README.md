@@ -66,7 +66,7 @@ Podemos verificar o nosso banco de dados destacado abaixo
 
 > Carregar no HDFS os arquivos do diretório 
 
-A seguir, vamos listar e criar as tabelas com o mesmo nome dos arquivos disponibilizados, as tabelas armazenarão os dados desses arquivos (.csv).
+A seguir, vamos carregar os arquivos abaixo que foram disponibilizados [aqui](https://drive.google.com/drive/folders/1OfZTSYcgcun-S7UFNVAzbcr0-PzlEc08), no HFDS.
 
 
 Arquivo/Tabela | 
@@ -86,6 +86,38 @@ salesorderhead |
 
 > Criar tabelas externas com os dados no Hive
 
+
+>> 1. address
+
+Atributos
+
+Nome | Tipo 
+----- | --------------
+AddressID | Int
+AddressLine1 |  String
+AddressLine2 |  String
+City | String
+PostalCode | String
+rowguid | String 
+ModifiedDate | Date
+
+
+<b>Diagrama </b>
+
+![image](https://user-images.githubusercontent.com/42544892/236662082-a54d0ecb-b2cc-439e-beda-cd7310b4f44c.png)
+
+
+<b>DDL </b>
+
+
+```sql
+create external table address (AddressID int, AddressLine1 string, AddressLine2 string,City string,PostalCode string,rowguid string,ModifiedDate string) 
+row format delimited fields terminated by ';' 
+stored as textfile 
+location '/app/AdventureWorks/address';
+```
+
+<hr>
 
 
 
